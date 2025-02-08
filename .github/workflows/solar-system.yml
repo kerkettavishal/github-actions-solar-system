@@ -28,6 +28,9 @@ jobs:
     
         - name: Unit Testing
           run: npm test 
+        
+        - name: Test
+          run: exit 1
           
         - name: Archive Test Result
           if: always()
