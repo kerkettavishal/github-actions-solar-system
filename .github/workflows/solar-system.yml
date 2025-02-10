@@ -103,8 +103,7 @@ jobs:
       environment: 
         name: development
       steps:
-        - name: checkout
-          uses: action/checkout@v4
+        - uses: actions/checkout@v4
 
         - uses: azure/setup-kubectl@v4
           with:
