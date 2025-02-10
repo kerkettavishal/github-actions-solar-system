@@ -115,7 +115,7 @@ jobs:
             kubeconfig: ${{ secrets.KUBECONFIG }}
             context: default
 
-            
+
         - name: Set up Kubeconfig
           run: |
               mkdir -p $HOME/.kube
@@ -127,7 +127,7 @@ jobs:
             ls -la ~
 
         - name: Check kubectl
-          run: kubectl version -o yaml
+          run: kubectl get pods
 
         - name: Ingress IP
           run: |
