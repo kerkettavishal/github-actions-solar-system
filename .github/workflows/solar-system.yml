@@ -118,7 +118,7 @@ jobs:
             context: default
         - name: PRINT
           run: |
-            cat ~/.kube/config
+            ls -la ~
 
         - name: Check kubectl
           run: kubectl version -o yaml
