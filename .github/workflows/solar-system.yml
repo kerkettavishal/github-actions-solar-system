@@ -34,6 +34,9 @@ jobs:
     
         - name: Install Dependencies
           run: npm install
+
+        - name: List Modules
+          run: ls 
     
         - name: Unit Testing
           run: npm test 
