@@ -114,6 +114,14 @@ jobs:
             method: kubeconfig
             kubeconfig: ${{ secrets.KUBECONFIG }}
             context: default
+
+            
+        - name: Set up Kubeconfig
+          run: |
+              mkdir -p $HOME/.kube
+              echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
+              chmod 600 $HOME/.kube/config
+          
         - name: PRINT
           run: |
             ls -la ~
