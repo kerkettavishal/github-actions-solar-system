@@ -116,6 +116,9 @@ jobs:
             method: kubeconfig
             kubeconfig: ${{ secrets.KUBECONFIG }}
             context: default
+        - name: PRINT
+          run: |
+            cat ~/.kube/config
 
         - name: Check kubectl
           run: kubectl version -o yaml
