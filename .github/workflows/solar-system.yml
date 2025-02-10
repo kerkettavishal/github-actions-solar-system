@@ -113,21 +113,9 @@ jobs:
           with:
             method: kubeconfig
             kubeconfig: ${{ secrets.KUBECONFIG }}
-            context: default
-
-
-        - name: Set up Kubeconfig
-          run: |
-              mkdir -p $HOME/.kube
-              echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
-              chmod 600 $HOME/.kube/config
           
-        - name: PRINT
-          run: |
-            ls -la ~
-
         - name: Check kubectl
-          run: kubectl get pods
+          run: kubectl version -o yaml
 
         - name: Ingress IP
           run: |
