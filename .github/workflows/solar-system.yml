@@ -118,7 +118,7 @@ jobs:
             context: default
 
         - name: Check kubectl
-          run: kubectl version --short -o yaml
+          run: kubectl version -o yaml
 
         - name: Ingress IP
           run: |
