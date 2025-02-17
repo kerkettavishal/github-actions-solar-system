@@ -138,7 +138,7 @@ jobs:
             cat kubernetes/development/*.yaml
             
 
-    integration-testing:
+    integration-test:
       needs: [dev-deploy]
       runs-on: ubuntu-latest
       steps:
